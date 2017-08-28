@@ -25,7 +25,9 @@ SECRET_KEY = 'sbb2dhxluz*=2w8m&#*2cg1naclbk7m%aft=n+84na^dbz#k0z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'cas.test.local',
+]
 
 
 # Application definition
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mama_cas',
 ]
 
 MIDDLEWARE = [
