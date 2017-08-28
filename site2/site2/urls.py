@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django_cas_ng import views as cas_ng_views
 
 urlpatterns = [
+    # CAS
+    url(r'^admin/login/$', cas_ng_views.login, name='cas_ng_login'),
+    url(r'^admin/logout/$', cas_ng_views.logout, name='cas_ng_logout'),
+    url(r'^admin/callback/$', cas_ng_views.callback, name='cas_ng_proxy_callback'),
+
+    # Admin
     url(r'^admin/', admin.site.urls),
 ]
